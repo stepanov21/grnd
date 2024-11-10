@@ -36,7 +36,7 @@ const projects = [
 gsap.registerPlugin(useGSAP);
 
 const Projects = () => {
-  const container = useRef(null);
+  const container = useRef();
   const previewRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -101,6 +101,7 @@ const Projects = () => {
     { scope: container }
   );
   return (
+    //@ts-ignore
     <section ref={container} className="mt-[150px] px-[50px]">
       <div className="flex justify-between items-center">
         <h2 className="text-[100px]">Our works</h2>

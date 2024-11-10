@@ -2,13 +2,14 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useRef } from "react";
 
+gsap.registerPlugin(ScrollTrigger);
 const WhoIs = () => {
-  gsap.registerPlugin(ScrollTrigger);
-  const container = useRef(null);
+  const container = useRef();
+
   useGSAP(
     () => {
       gsap.from(".card", {
@@ -22,6 +23,7 @@ const WhoIs = () => {
     { scope: container }
   );
   return (
+    //@ts-ignore
     <section ref={container} className="mt-[350px] px-[50px]">
       <div className="flex justify-between items-end border-b-2 border-secondary pb-[30px]">
         <p className="text-2xl max-w-[700px]">
