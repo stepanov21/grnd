@@ -8,7 +8,7 @@ const Header = () => {
       <div>
         <Image src={"./logo.svg"} height={50} width={185} alt="logo" />
       </div>
-      <nav className="header-bg-blur px-5 rounded-full flex gap-[50px] text-[20px] items-center">
+      <nav className="header-bg-blur pl-5 rounded-full flex gap-[50px] text-[20px] items-center">
         <Link href={"/"}>Home</Link>
         <Link href={"/"}>Services</Link>
         <Link href={"/"}>Cases</Link>

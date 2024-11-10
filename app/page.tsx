@@ -1,10 +1,17 @@
+"use client";
+
+import Projects from "@/pages/home/components/projects/Projects";
+import Services from "@/pages/home/components/projects/Services";
+import WhoIs from "@/pages/home/components/projects/WhoIs";
 import Header from "@/widgets/header/Header";
-import { ArrowDownRight, MousePointer2 } from "lucide-react";
+import { MousePointer2 } from "lucide-react";
+
+
 
 export default function Home() {
   return (
-    <>
-      <section className="hero-bg-section h-screen rounded-[20px]">
+    <div>
+      <section className="hero-bg-section h-screen rounded-[20px] mx-[50px]">
         <Header />
         <h1 className="text-center uppercase font-bold text-[70px] mt-[200px]">
           mobile design & <br /> development agency
@@ -19,51 +26,9 @@ export default function Home() {
           <MousePointer2 className="scale-x-[-1]" />
         </button>
       </section>
-      <section className="mt-[150px]">
-        <div className="flex justify-between items-center">
-          <h2 className="text-[100px]">Our works</h2>
-          <p className="text-2xl max-w-[400px]">
-            People who made themselves and their business better by trusting us
-          </p>
-        </div>
-        <div className="grid grid-cols-[2fr_7fr_3fr] border-b-2 border-b-secondary text-2xl pb-[30px] mt-[50px] mb-[30px]">
-          <span>Index</span>
-          <span>Project</span>
-          <span>Category</span>
-        </div>
-        <div className="grid grid-cols-[2fr_7fr_3fr] pb-[30px] text-[50px] cursor-pointer">
-          <span className=" italic">01</span>
-          <span>PRORV.studio</span>
-          <div className="flex justify-between items-end">
-            WEB
-            <ArrowDownRight className="mb-3"/>
-          </div>
-        </div>
-        <div className="grid grid-cols-[2fr_7fr_3fr] pb-[30px] text-[50px] cursor-pointer">
-          <span className=" italic">01</span>
-          <span>PRORV.studio</span>
-          <div className="flex justify-between items-end">
-            WEB
-            <ArrowDownRight className="mb-3"/>
-          </div>
-        </div>
-        <div className="grid grid-cols-[2fr_7fr_3fr] pb-[30px] text-[50px] cursor-pointer">
-          <span className=" italic">01</span>
-          <span>PRORV.studio</span>
-          <div className="flex justify-between items-end">
-            WEB
-            <ArrowDownRight className="mb-3"/>
-          </div>
-        </div>
-        <div className="grid grid-cols-[2fr_7fr_3fr] pb-[30px] text-[50px] cursor-pointer">
-          <span className=" italic">01</span>
-          <span>PRORV.studio</span>
-          <div className="flex justify-between items-end">
-            WEB
-            <ArrowDownRight className="mb-3"/>
-          </div>
-        </div>
-      </section>
-    </>
+      <Projects/>
+      <Services/>
+      <WhoIs/>
+    </div>
   );
 }
